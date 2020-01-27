@@ -6,4 +6,4 @@ before_install:
   - docker build -t constaned/docker-test -f Dockerfile.dev .
 
 script:
-  - docker run constaned/docker-test npm run test --watchAll=false
+  - docker run -e CI=true constaned/docker-test npm run test --watchAll=false
